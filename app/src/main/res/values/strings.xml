@@ -32,4 +32,10 @@
     <string name="save">Save</string>
     <string name="dont_have_google_account">Don’t have a Google account?</string>
     <string name="create_one">Create one</string>
+    <string name="user_name">John Doe</string>
+    <string name="user_email">example@gmail.com\n</string>
+    <string name="logout_text">Logout</string>
+    <string name="edit_details_text">Edit Details</string>
+    <string name="profile_pic_string">Profile Pic</string>
+    <string name="your_profile_text">Your main profile</string>
 </resources>
