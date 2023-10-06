@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.youthbuddyapp.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/from_login_to_info_1"
+            app:destination="@+id/info1Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/info1Fragment"
+        android:name="com.example.youthbuddyapp.Info1Fragment"
+        android:label="Login"
+        tools:layout="@layout/info_1">
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "302307983844",
+    "project_id": "youthbuddyapp",
+    "storage_bucket": "youthbuddyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302307983844:android:ff66197f7a1327437a87f1",
+        "android_client_info": {
+          "package_name": "com.example.youthbuddyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302307983844-mc77ngtnha0ldetpmnqkkid5kcms72tv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.youthbuddyapp",
+            "certificate_hash": "af494e5b531cee80976291edba0d1a7fea68d844"
+          }
+        },
+        {
+          "client_id": "302307983844-ueu6no4l5m2f483q4uvttj075qo6gurn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYyEI7mxzvlxNRfC0wzKzjUpxCPyaD6sQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302307983844-ueu6no4l5m2f483q4uvttj075qo6gurn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
