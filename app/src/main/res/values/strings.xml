@@ -4,4 +4,8 @@
     <string name="your_personal_details">Your personal details</string>
     <string name="profile_image">Profile image</string>
     <string name="save">Save</string>
+    <string name="upload_your_cv_here">Upload your CV here</string>
+    <string name="full_name">Full name</string>
+    <string name="email_address">Email address</string>
+    <string name="phone_number">Phone number</string>
 </resources>
