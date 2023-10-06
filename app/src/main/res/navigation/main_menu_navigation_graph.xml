@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu_navigation_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.youthbuddyapp.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/profile_fragment">
+        <action
+            android:id="@+id/from_profile_to_jobs"
+            app:destination="@id/jobsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/jobsFragment"
+        android:name="com.example.youthbuddyapp.JobsFragment"
+        android:label="Jobs"
+        tools:layout="@layout/jobs_fragment">
+        <action
+            android:id="@+id/from_jobs_to_saved"
+            app:destination="@id/savedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.youthbuddyapp.SavedFragment"
+        android:label="Saved"
+        tools:layout="@layout/saved_fragment">
+        <action
+            android:id="@+id/from_saved_to_people"
+            app:destination="@id/peopleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.youthbuddyapp.PeopleFragment"
+        android:label="Login"
+        tools:layout="@layout/people_fragment">
+
+    </fragment>
+
+</navigation>
