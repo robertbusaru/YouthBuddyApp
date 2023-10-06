@@ -36,4 +36,16 @@
     <string name="congratulations">Congratulations</string>
     <string name="continue_text">Continue</string>
     <string name="back">Back</string>
+    <string name="upload_your_cv_here">Upload your CV here</string>
+    <string name="full_name">Full name</string>
+    <string name="email_address">Email address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="dont_have_google_account">Don’t have a Google account?</string>
+    <string name="create_one">Create one</string>
+    <string name="user_name">John Doe</string>
+    <string name="user_email">example@gmail.com\n</string>
+    <string name="logout_text">Logout</string>
+    <string name="edit_details_text">Edit Details</string>
+    <string name="profile_pic_string">Profile Pic</string>
+    <string name="your_profile_text">Your main profile</string>
 </resources>

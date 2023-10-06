@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0085FF</color>
     <color name="green_button">#06B72D</color>
     <color name="outline_button">#1E1E1E</color>
+    <color name="grey_stroke_calendar">#CFD2D5</color>
 </resources>
