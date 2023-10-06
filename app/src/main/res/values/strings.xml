@@ -30,4 +30,10 @@
     <string name="your_personal_details">Your personal details</string>
     <string name="profile_image">Profile image</string>
     <string name="save">Save</string>
+    <string name="the_next_steps_will_shape_your_preferences_and_be_sure_of_your_answers">The next steps will shape your preferences and be sure of your answers.</string>
+    <string name="in_just_a_few_minutes_you_will_have_access_to_numerous_jobs_and_a_friendly_community">In just a few minutes you will have access to numerous jobs and a friendly community.</string>
+    <string name="your_personal_details_are_successfully_saved">Your personal details are successfully saved!</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="continue_text">Continue</string>
+    <string name="back">Back</string>
 </resources>

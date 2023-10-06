@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green_button">#06B72D</color>
+    <color name="outline_button">#1E1E1E</color>
 </resources>
