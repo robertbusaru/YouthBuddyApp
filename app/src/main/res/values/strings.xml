@@ -26,4 +26,8 @@
     <string name="invest_time_in_learning_and_developing_digital_skills_these_will_make_you_competitive_in_the_job_market">Invest time in learning and developing digital skills. These will make you competitive in the job market.</string>
     <string name="embrace_change_and_always_seek_new_learning_opportunities">Embrace change and always seek new learning opportunities.</string>
     <string name="build_networks_and_relationships_with_professionals_in_your_field_of_interest_so_you_can_benefit_from_advice_and_mentorship_opportunities">Build networks and relationships with professionals in your field of interest, so you can benefit from advice and mentorship opportunities.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_personal_details">Your personal details</string>
+    <string name="profile_image">Profile image</string>
+    <string name="save">Save</string>
 </resources>
