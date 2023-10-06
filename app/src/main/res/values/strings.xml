@@ -9,4 +9,6 @@
     <string name="shape_your_professional_trajectory">Let\'s shape your professional trajectory together!</string>
     <string name="privilege_of_app">To have the privilege of using our app, please use your Google account</string>
     <string name="sign_up_with_google">Sign up with Google</string>
+    <string name="dont_have_google_account">Don’t have a Google account?</string>
+    <string name="create_one">Create one</string>
 </resources>
