@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profileFragment"
+        android:actionLayout="@layout/menu_item_layout"
+        android:enabled="true"
+        android:icon="@drawable/user_light__1_"
+        android:titleTextAppearance="@style/BottomNavBarStyle"
+        android:title="@string/profile_bottom_nav_button" />
+
+    <item
+        android:id="@+id/jobsFragment"
+        android:actionLayout="@layout/menu_item_layout"
+        android:enabled="true"
+        android:icon="@drawable/compass_light"
+        android:titleTextAppearance="@style/BottomNavBarStyle"
+        android:title="@string/jobs_bottom_nav_button" />
+
+    <item
+        android:id="@+id/savedFragment"
+        android:actionLayout="@layout/menu_item_layout"
+        android:enabled="true"
+        android:icon="@drawable/saved_jobs_icon"
+        android:titleTextAppearance="@style/BottomNavBarStyle"
+        android:title="@string/saved_bottom_nav_button" />
+
+    <item
+        android:id="@+id/peopleFragment"
+        android:actionLayout="@layout/menu_item_layout"
+        android:enabled="true"
+        android:icon="@drawable/group_light"
+        android:titleTextAppearance="@style/BottomNavBarStyle"
+        android:title="@string/people_bottom_nav_button" />
+
+</menu>
