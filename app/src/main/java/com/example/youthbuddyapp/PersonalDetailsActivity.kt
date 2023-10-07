@@ -14,42 +14,64 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.FirebaseStorageKtxRegistrar
 import com.google.firebase.storage.ktx.storage
+import com.squareup.picasso.Picasso
 
 class PersonalDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPersonalDetailsBinding
+    private val auth = FirebaseAuth.getInstance()
+    private val db = Firebase.firestore
+    private val storage = Firebase.storage
+    private lateinit var docUri: Uri
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPersonalDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         FirebaseApp.initializeApp(this)
-        val db = Firebase.firestore
-        val auth = FirebaseAuth.getInstance()
-        Firebase.storage
 
+
+
+        Picasso.get().load(auth.currentUser?.photoUrl).into(binding.imageView)
+        binding.fullNameTextInputLayout.editText?.setText(auth.currentUser?.displayName)
+        binding.emailTextInputLayout.editText?.setText(auth.currentUser?.email)
+        if (auth.currentUser?.phoneNumber != null) {
+            binding.phoneNumberTextInputLayout.editText?.setText(auth.currentUser?.phoneNumber)
+        }
 
         binding.editTextBox.setOnClickListener {
             val fileExplorerIntent = Intent(Intent.ACTION_GET_CONTENT)
             fileExplorerIntent.type = "application/*"
             filePickerActivityResult.launch(fileExplorerIntent)
         }
+
         binding.saveButton.setOnClickListener {
+            val filename = auth.currentUser?.uid.toString()
+            val storageReference = FirebaseStorage.getInstance().getReference("documents/$filename")
+            storageReference.putFile(docUri).addOnSuccessListener {
+            }
+
             val user = hashMapOf(
+                "profilePicture" to auth.currentUser?.photoUrl.toString(),
                 "name" to binding.fullNameTextInputLayout.editText?.text.toString(),
                 "email" to binding.emailTextInputLayout.editText?.text.toString(),
-                "phone" to binding.phoneNumberTextInputLayout.editText?.text.toString()
+                "phone" to binding.phoneNumberTextInputLayout.editText?.text.toString(),
             )
-            db.collection("users").document(auth.currentUser?.uid.toString()).set(user).addOnSuccessListener {
-            }.addOnFailureListener { e-> Log.d("uploadCheck", e.toString()) }
+            db.collection("users").document(auth.currentUser?.uid.toString()).set(user)
+                .addOnSuccessListener {
+                }.addOnFailureListener { e -> Log.d("uploadCheck", e.toString()) }
         }
     }
 
     private var filePickerActivityResult: ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
+                binding.uploadCvTextInputLayout.hint=""
                 binding.editTextBox.hint = getFileName(result.data?.data!!)
-                //val stream = FileInputStream(File((result.data?.data!!)).toString())
+                docUri = result.data?.data!!
+
             }
         }
 

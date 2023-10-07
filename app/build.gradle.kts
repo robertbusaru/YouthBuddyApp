@@ -87,6 +87,8 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.6.2") // Add this if not already present
     implementation ("androidx.lifecycle:lifecycle-livedata:2.6.2") // Add this if not already present
+    implementation("com.squareup.picasso:picasso:2.8")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 
     //nav graph
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
