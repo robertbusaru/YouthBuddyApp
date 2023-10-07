@@ -52,4 +52,8 @@
     <string name="jobs_bottom_nav_button">Jobs</string>
     <string name="saved_bottom_nav_button">Saved</string>
     <string name="people_bottom_nav_button">People</string>
+    <string name="question">Question</string>
+    <string name="complete_the_following_form">Complete the following form:</string>
+    <string name="location">Location</string>
+    <string name="age">Age</string>
 </resources>
