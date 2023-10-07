@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sixAnswerCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="16dp"
+    android:animateLayoutChanges="true"
+    android:elevation="50dp"
+    android:background="@drawable/elevation_layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/questionTitle"
+            style="@style/QuestionStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/question"
+            app:layout_constraintEnd_toStartOf="@+id/expandArrowImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/expandArrowImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="true"
+            android:contentDescription="Expand/Collapse Arrow"
+            android:focusable="true"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sixAnswersCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:paddingTop="70dp">
+
+        <CheckBox
+            android:id="@+id/answer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="CheckBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/answer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="CheckBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/answer1" />
+        <CheckBox
+            android:id="@+id/answer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="CheckBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/answer2" />
+        <CheckBox
+            android:id="@+id/answer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="CheckBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/answer3" />
+
+        <CheckBox
+            android:id="@+id/answer5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="CheckBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/answer4" />
+
+        <CheckBox
+            android:id="@+id/answer6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="CheckBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/answer5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/OutlinedBoxEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="10dp"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/answer6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/answer6"
+            app:layout_constraintTop_toTopOf="@+id/answer6">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/InputTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
