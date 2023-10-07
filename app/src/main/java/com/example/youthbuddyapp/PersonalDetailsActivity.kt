@@ -24,7 +24,7 @@ class PersonalDetailsActivity : AppCompatActivity() {
     private val auth = FirebaseAuth.getInstance()
     private val db = Firebase.firestore
     private val storage = Firebase.storage
-    private lateinit var docUri: Uri
+    private var docUri: Uri? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPersonalDetailsBinding.inflate(layoutInflater)
@@ -46,7 +46,8 @@ class PersonalDetailsActivity : AppCompatActivity() {
         binding.saveButton.setOnClickListener {
             val filename = auth.currentUser?.uid.toString()
             val storageReference = FirebaseStorage.getInstance().getReference("documents/$filename")
-            storageReference.putFile(docUri).addOnSuccessListener {
+            if(docUri != null)
+            storageReference.putFile(docUri!!).addOnSuccessListener {
             }
 
             val user = hashMapOf(

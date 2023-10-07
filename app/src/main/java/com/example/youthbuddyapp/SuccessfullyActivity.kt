@@ -14,7 +14,7 @@ class SuccessfullyActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.continueButton.setOnClickListener {
-            val intent = Intent(this, SuccessfullyActivity::class.java)
+            val intent = Intent(this, JobProfileActivity::class.java)
             startActivity(intent)
         }
 

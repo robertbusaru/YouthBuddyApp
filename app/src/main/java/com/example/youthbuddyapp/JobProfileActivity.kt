@@ -1,5 +1,6 @@
 package com.example.youthbuddyapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,12 +21,16 @@ class JobProfileActivity : AppCompatActivity() {
         allowSingleCheckbox()
 
         jobProfileBinding.saveButton.setOnClickListener {
-            if (checkForUncheckedQuestions())
+            if (checkForUncheckedQuestions()) {
                 Toast.makeText(
                     applicationContext,
                     "You have unanswered questions",
                     Toast.LENGTH_LONG
                 ).show()
+            } else {
+                val intent = Intent(this, MainMenuActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }

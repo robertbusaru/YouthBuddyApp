@@ -140,7 +140,6 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="66dp"
                 android:layout_marginBottom="20dp"
-                android:drawableStart="@drawable/google_icon"
                 android:paddingStart="25dp"
                 android:paddingEnd="25dp"
                 android:paddingTop="10dp"
