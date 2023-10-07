@@ -10,13 +10,11 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.youthbuddyapp.databinding.ActivityPersonalDetailsBinding
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
-import java.io.File
-import java.io.FileInputStream
-
 
 class PersonalDetailsActivity : AppCompatActivity() {
 
@@ -25,9 +23,10 @@ class PersonalDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPersonalDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        FirebaseApp.initializeApp(this)
         val db = Firebase.firestore
         val auth = FirebaseAuth.getInstance()
-        val storage = Firebase.storage
+        Firebase.storage
 
 
         binding.editTextBox.setOnClickListener {
@@ -54,7 +53,7 @@ class PersonalDetailsActivity : AppCompatActivity() {
             }
         }
 
-    @SuppressLint("Range")
+    @SuppressLint("Range", "Recycle")
     fun getFileName(uri: Uri): String {
         var result: String? = null
         if (uri.scheme == "content") {

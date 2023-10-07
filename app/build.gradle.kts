@@ -4,7 +4,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.2")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.4")
     }
 }
 
@@ -85,19 +85,18 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    implementation("androidx.lifecycle:lifecycle-viewmodel:2.3.1") // Add this if not already present
-    implementation ("androidx.lifecycle:lifecycle-livedata:2.3.1") // Add this if not already present
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.6.2") // Add this if not already present
+    implementation ("androidx.lifecycle:lifecycle-livedata:2.6.2") // Add this if not already present
 
     //nav graph
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
 
-    //firebase
-    // Import the BoM for the Firebase platform
-    implementation (platform("com.google.firebase:firebase-bom:32.0.0"))
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation("com.google.firebase:firebase-storage-ktx")
 
     // Declare the dependency for the Cloud Firestore library
     implementation("com.google.firebase:firebase-firestore-ktx")
-    implementation("com.google.firebase:firebase-auth:21.0.0")
-    implementation("com.google.android.gms:play-services-auth:19.0.0")
+    implementation("com.google.firebase:firebase-auth:22.1.2")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 }
