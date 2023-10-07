@@ -107,6 +107,7 @@
             app:layout_constraintTop_toBottomOf="@+id/answer5" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otherEmploymentDomain"
             style="@style/OutlinedBoxEditText"
             android:layout_width="0dp"
             android:layout_height="0dp"
