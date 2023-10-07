@@ -28,7 +28,6 @@ class PersonalDetailsActivity : AppCompatActivity() {
         val auth = FirebaseAuth.getInstance()
         Firebase.storage
 
-
         binding.editTextBox.setOnClickListener {
             val fileExplorerIntent = Intent(Intent.ACTION_GET_CONTENT)
             fileExplorerIntent.type = "application/*"
@@ -40,9 +39,16 @@ class PersonalDetailsActivity : AppCompatActivity() {
                 "email" to binding.emailTextInputLayout.editText?.text.toString(),
                 "phone" to binding.phoneNumberTextInputLayout.editText?.text.toString()
             )
-            db.collection("users").document(auth.currentUser?.uid.toString()).set(user).addOnSuccessListener {
-            }.addOnFailureListener { e-> Log.d("uploadCheck", e.toString()) }
+            db.collection("users").document(auth.currentUser?.uid.toString())
+                .set(user)
+                .addOnSuccessListener {
+                    val intent = Intent(this, Info1Activity::class.java)
+                    startActivity(intent)
+                }
+                .addOnFailureListener { e -> Log.d("uploadCheck", e.toString()) }
         }
+
+
     }
 
     private var filePickerActivityResult: ActivityResultLauncher<Intent> =
