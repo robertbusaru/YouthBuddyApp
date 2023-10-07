@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="WelcomeTextStyle">
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/barlow_bold</item>
@@ -75,6 +76,35 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:lineSpacingExtra">7sp</item>
+    </style>
+
+    <style name="QuestionStyle">
+        <item name="android:fontFamily">@font/barlow_bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="OutlinedBoxEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius</item>
+        <item name="font">@font/barlow_bold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="InputTextStyle">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="maxLines">1</item>
+        <item name="android:fontFamily">@font/barlow_bold</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
 </resources>
