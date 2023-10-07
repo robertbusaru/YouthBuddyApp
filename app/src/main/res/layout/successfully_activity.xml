@@ -59,6 +59,7 @@
         android:layout_marginEnd="24dp"
         android:text="@string/the_next_steps_will_shape_your_preferences_and_be_sure_of_your_answers"
         android:textColor="@color/black"
+        android:drawablePadding="10dp"
         app:drawableStartCompat="@drawable/done_ring_round_duotone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
