@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/title"
         style="@style/WelcomeTextStyle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
@@ -41,15 +41,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/done_ring_round_duotone"
         android:drawablePadding="10dp"
         android:text="@string/invest_time_in_learning_and_developing_digital_skills_these_will_make_you_competitive_in_the_job_market"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone" />
 
     <TextView
         android:id="@+id/point2"
@@ -59,13 +59,13 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/done_ring_round_duotone"
         android:drawablePadding="10dp"
         android:text="@string/embrace_change_and_always_seek_new_learning_opportunities"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/point1" />
+        app:layout_constraintTop_toBottomOf="@+id/point1"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone" />
 
     <TextView
         android:id="@+id/point3"
@@ -75,13 +75,13 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/done_ring_round_duotone"
         android:drawablePadding="10dp"
         android:text="@string/build_networks_and_relationships_with_professionals_in_your_field_of_interest_so_you_can_benefit_from_advice_and_mentorship_opportunities"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/point2" />
+        app:layout_constraintTop_toBottomOf="@+id/point2"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone" />
 
     <Button
         android:id="@+id/continue_button"
@@ -89,10 +89,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="64dp"
         android:drawablePadding="10dp"
-        android:text="Continue"
+        android:text="@string/continue_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

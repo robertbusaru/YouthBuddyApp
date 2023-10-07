@@ -16,6 +16,21 @@
             android:name=".PersonalDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".Info1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SecondInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThirdInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FourthInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuccessfullyActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
