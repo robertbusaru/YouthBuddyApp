@@ -7,10 +7,15 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.youthbuddyapp.databinding.ActivityJobProfileBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class JobProfileActivity : AppCompatActivity() {
 
     private lateinit var jobProfileBinding: ActivityJobProfileBinding
+    private val auth = FirebaseAuth.getInstance()
+    private val db = Firebase.firestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         jobProfileBinding = ActivityJobProfileBinding.inflate(layoutInflater)
@@ -28,8 +33,48 @@ class JobProfileActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             } else {
-                val intent = Intent(this, MainMenuActivity::class.java)
-                startActivity(intent)
+                var jobDomain = ""
+                if (jobProfileBinding.employmentDomain.answer1.isChecked)
+                    jobDomain = jobProfileBinding.employmentDomain.answer1.text.toString()
+                else if (jobProfileBinding.employmentDomain.answer2.isChecked)
+                    jobDomain = jobProfileBinding.employmentDomain.answer2.text.toString()
+                else if (jobProfileBinding.employmentDomain.answer3.isChecked)
+                    jobDomain = jobProfileBinding.employmentDomain.answer3.text.toString()
+                else if (jobProfileBinding.employmentDomain.answer4.isChecked)
+                    jobDomain = jobProfileBinding.employmentDomain.answer4.text.toString()
+                else if (jobProfileBinding.employmentDomain.answer5.isChecked)
+                    jobDomain = jobProfileBinding.employmentDomain.answer5.text.toString()
+                else if (jobProfileBinding.employmentDomain.answer6.isChecked)
+                    jobDomain =
+                        jobProfileBinding.employmentDomain.otherEmploymentDomain.editText?.text.toString()
+
+                var skills = ""
+                if (jobProfileBinding.skills.answer1.isChecked)
+                    skills = jobProfileBinding.skills.answer1.text.toString()
+                else if (jobProfileBinding.skills.answer2.isChecked)
+                    skills = jobProfileBinding.skills.answer2.text.toString()
+                else if (jobProfileBinding.skills.answer3.isChecked)
+                    skills = jobProfileBinding.skills.answer3.text.toString()
+                else if (jobProfileBinding.skills.answer4.isChecked)
+                    skills = jobProfileBinding.skills.answer4.text.toString()
+                else if (jobProfileBinding.skills.answer5.isChecked)
+                    skills = jobProfileBinding.skills.answer5.text.toString()
+                else if (jobProfileBinding.skills.answer6.isChecked)
+                    skills =
+                        jobProfileBinding.skills.otherEmploymentDomain.editText?.text.toString()
+
+                val userData = hashMapOf(
+                    "location" to jobProfileBinding.locationTextView.editText?.text.toString(),
+                    "employmentDomain" to jobDomain,
+                    "skillsDevelop" to skills
+                )
+                db.collection("users").document(auth.currentUser?.uid.toString())
+                    .update(userData as Map<String, Any>)
+                    .addOnSuccessListener {
+                        val intent = Intent(this, MainMenuActivity::class.java)
+                        startActivity(intent)
+                    }
+                    .addOnFailureListener { e -> Log.d("uploadCheck", e.toString()) }
             }
         }
 

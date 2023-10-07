@@ -46,9 +46,9 @@ class PersonalDetailsActivity : AppCompatActivity() {
         binding.saveButton.setOnClickListener {
             val filename = auth.currentUser?.uid.toString()
             val storageReference = FirebaseStorage.getInstance().getReference("documents/$filename")
-            if(docUri != null)
-            storageReference.putFile(docUri!!).addOnSuccessListener {
-            }
+            if (docUri != null)
+                storageReference.putFile(docUri!!).addOnSuccessListener {
+                }
 
             val user = hashMapOf(
                 "profilePicture" to auth.currentUser?.photoUrl.toString(),
@@ -72,7 +72,7 @@ class PersonalDetailsActivity : AppCompatActivity() {
     private var filePickerActivityResult: ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
-                binding.uploadCvTextInputLayout.hint=""
+                binding.uploadCvTextInputLayout.hint = ""
                 binding.editTextBox.hint = getFileName(result.data?.data!!)
                 docUri = result.data?.data!!
 

@@ -46,6 +46,7 @@
                 android:text="@string/location" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/locationTextView"
                 style="@style/OutlinedBoxEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,6 +68,7 @@
                 android:text="@string/age" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ageTextView"
                 style="@style/OutlinedBoxEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
