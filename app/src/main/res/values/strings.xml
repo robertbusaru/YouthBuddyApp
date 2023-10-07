@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">YouthBuddyApp</string>
     <string name="logo">logo</string>
-    <string name="welcome_text">Welcome,</string>
+    <string name="welcome_text">Welcome</string>
     <string name="welcome_sub_text">Get on board to the family and get started immediately</string>
     <string name="explore_future_careers">Explore Future Careers</string>
     <string name="connect_with_people_like_you">Connect with people like you</string>
@@ -10,7 +10,7 @@
     <string name="privilege_of_app">To have the privilege of using our app, please use your Google account</string>
     <string name="sign_up_with_google">Sign up with Google</string>
     <string name="the_importance_of_education">The Importance of Education</string>
-    <string name="education_is_the_key_to_a_better_life">Education is the key to a better life and career success. In today\'s world, it\'s essential to understand the importance of education, especially for young people from disadvantaged backgrounds. Here\'s why education plays a crucial role in your lives:</string>
+    <string name="education_is_the_key_to_a_better_life">Education is the key to a better life and career success. In today\'s world, it\'s essential to understand the importance of education, especially for young people. Here\'s why education plays a crucial role in your lives:</string>
     <string name="critical_thinking">Education helps you develop critical thinking and problem-solving skills.</string>
     <string name="tips_for_success">Tips for Success</string>
     <string name="education_is_an_ongoing_process">Education is an ongoing process. We encourage you to actively engage in your learning, be curious, and explore new areas of knowledge.</string>

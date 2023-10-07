@@ -24,11 +24,11 @@
     <TextView
         android:id="@+id/title"
         style="@style/WelcomeTextStyle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="25dp"
         android:text="@string/tips_for_success"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/point1"
@@ -41,15 +41,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/done_ring_round_duotone"
         android:drawablePadding="10dp"
         android:text="@string/education_is_an_ongoing_process"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone" />
 
     <TextView
         android:id="@+id/point2"
@@ -59,13 +59,13 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/done_ring_round_duotone"
         android:drawablePadding="10dp"
         android:text="@string/set_clear_goals"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/point1" />
+        app:layout_constraintTop_toBottomOf="@+id/point1"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone" />
 
     <TextView
         android:id="@+id/point3"
@@ -75,13 +75,13 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/done_ring_round_duotone"
         android:drawablePadding="10dp"
         android:text="@string/learning_doesn_t_stop_at_school"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/point2" />
+        app:layout_constraintTop_toBottomOf="@+id/point2"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone" />
 
     <TextView
         android:id="@+id/point4"
@@ -91,13 +91,13 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:drawableStart="@drawable/done_ring_round_duotone"
         android:drawablePadding="10dp"
         android:text="@string/don_t_be_discouraged_by_obstacles"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/point3" />
+        app:layout_constraintTop_toBottomOf="@+id/point3"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone" />
 
     <Button
         android:id="@+id/continue_button"
@@ -108,7 +108,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:drawablePadding="10dp"
-        android:text="Continue"
+        android:text="@string/continue_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

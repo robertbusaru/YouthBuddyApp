@@ -32,15 +32,12 @@ class PersonalDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
         FirebaseApp.initializeApp(this)
 
-
-
         Picasso.get().load(auth.currentUser?.photoUrl).into(binding.imageView)
         binding.fullNameTextInputLayout.editText?.setText(auth.currentUser?.displayName)
         binding.emailTextInputLayout.editText?.setText(auth.currentUser?.email)
         if (auth.currentUser?.phoneNumber != null) {
             binding.phoneNumberTextInputLayout.editText?.setText(auth.currentUser?.phoneNumber)
         }
-
         binding.editTextBox.setOnClickListener {
             val fileExplorerIntent = Intent(Intent.ACTION_GET_CONTENT)
             fileExplorerIntent.type = "application/*"
@@ -59,10 +56,17 @@ class PersonalDetailsActivity : AppCompatActivity() {
                 "email" to binding.emailTextInputLayout.editText?.text.toString(),
                 "phone" to binding.phoneNumberTextInputLayout.editText?.text.toString(),
             )
-            db.collection("users").document(auth.currentUser?.uid.toString()).set(user)
+
+            db.collection("users").document(auth.currentUser?.uid.toString())
+                .set(user)
                 .addOnSuccessListener {
-                }.addOnFailureListener { e -> Log.d("uploadCheck", e.toString()) }
+                    val intent = Intent(this, Info1Activity::class.java)
+                    startActivity(intent)
+                }
+                .addOnFailureListener { e -> Log.d("uploadCheck", e.toString()) }
         }
+
+
     }
 
     private var filePickerActivityResult: ActivityResultLauncher<Intent> =

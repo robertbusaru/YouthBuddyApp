@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FirstInfoActivity">
+    tools:context=".SuccessfullyActivity">
 
     <ImageView
         android:id="@+id/app_logo"
@@ -23,7 +23,7 @@
     <TextView
         android:id="@+id/title"
         style="@style/WelcomeTextStyle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
@@ -37,10 +37,10 @@
     <TextView
         android:id="@+id/text"
         style="@style/SubTextStyle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="7dp"
         android:layout_marginEnd="24dp"
         android:text="@string/your_personal_details_are_successfully_saved"
         android:textColor="@color/black"
@@ -55,10 +55,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="24dp"
         android:text="@string/the_next_steps_will_shape_your_preferences_and_be_sure_of_your_answers"
         android:textColor="@color/black"
+        android:drawablePadding="10dp"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text" />
@@ -74,6 +76,7 @@
         android:drawablePadding="10dp"
         android:text="@string/in_just_a_few_minutes_you_will_have_access_to_numerous_jobs_and_a_friendly_community"
         android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/done_ring_round_duotone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1" />
@@ -81,10 +84,10 @@
     <Button
         android:id="@+id/continue_button"
         style="@style/GreenButton"
-        android:layout_width="283dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="64dp"
         android:drawablePadding="10dp"
         android:text="@string/continue_text"
@@ -93,19 +96,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
-    <Button
-        android:id="@+id/back_button"
-        style="@style/CustomButtonOutline"
-        android:layout_width="283dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="64dp"
-        android:drawablePadding="10dp"
-        android:text="@string/back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/continue_button" />
+    <!--    <Button-->
+    <!--        android:id="@+id/back_button"-->
+    <!--        style="@style/CustomButtonOutline"-->
+    <!--        android:layout_width="283dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="64dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:layout_marginEnd="64dp"-->
+    <!--        android:drawablePadding="10dp"-->
+    <!--        android:text="@string/back"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/continue_button" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="15dp"
         android:text="@string/the_impact_of_technology_and_future_professions"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/text"
