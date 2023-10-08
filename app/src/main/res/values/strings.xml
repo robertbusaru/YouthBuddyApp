@@ -50,10 +50,18 @@
     <string name="your_profile_text">Your main profile</string>
     <string name="profile_bottom_nav_button">Profile</string>
     <string name="jobs_bottom_nav_button">Jobs</string>
-    <string name="saved_bottom_nav_button">Saved</string>
+    <string name="saved_bottom_nav_button">Tips</string>
     <string name="people_bottom_nav_button">People</string>
     <string name="question">Question</string>
     <string name="complete_the_following_form">Complete the following form:</string>
     <string name="location">Location</string>
     <string name="age">Age</string>
+    <string name="achieve_skills">Achieve valuable skills</string>
+    <string name="tips_text_subtitle">A successful career involves development and dedication at every stage of it. Try a section from here and using the available materials, build yourself a successful career.</string>
+    <string name="verified_text">Engage with content or courses that are officially recognized, accredited, or endorsed by professionals, ensuring a quality learning experience that contributes to your skill enhancement.</string>
+    <string name="puzzle_piece">Explore and connect different pieces of knowledge, offering a holistic approach to skill development where various skills complement and build on each other</string>
+    <string name="speech_bubble">Dialogue, exchange of ideas, and communal learning occur, fostering a dynamic and engaging environment to develop your skills effectively.</string>
+    <string name="document_tips">Tap into resources like guides, manuals, articles, and more that serve as valuable tools for self-directed learning and skill acquisition.</string>
+    <string name="two_pen_text">Join forces with peers, co-create, and learn through cooperation and shared expertise, enhancing not only your writing but also critical thinking and teamwork skills.</string>
+    <string name="jobs_based_on">Jobs based on your profile</string>
 </resources>

@@ -11,4 +11,5 @@
     <color name="green_button">#06B72D</color>
     <color name="outline_button">#1E1E1E</color>
     <color name="grey_stroke_calendar">#CFD2D5</color>
+    <color name="grey_tips">#F1F1F1</color>
 </resources>
