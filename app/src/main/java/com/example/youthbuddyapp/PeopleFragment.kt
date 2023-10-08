@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.youthbuddyapp.databinding.PeopleFragmentBinding
 import com.example.youthbuddyapp.models.People
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.runBlocking
@@ -31,18 +32,22 @@ class PeopleFragment : Fragment() {
         binding = PeopleFragmentBinding.inflate(inflater, container, false)
         adapter = PeopleAdapter(requireContext(),people)
         Firebase.firestore.collection("users").get().addOnSuccessListener { documents->
-                for (document in documents){
-                    Log.d("testamm","document ->> ${document.data["name"]}")
-                    var p = People(document.data["profilePicture"] as String,
-                        document.data["name"] as String,
-                        document.data["email"] as String)
-                    people.add(p)
+                for (document in documents) {
+                    Log.d("testamm", "document ->> ${document.data["name"]}")
+                    if (document.id != FirebaseAuth.getInstance().currentUser!!.uid) {
+                        var p = People(
+                            document.data["profilePicture"] as String,
+                            document.data["name"] as String,
+                            document.data["email"] as String
+                        )
+                        people.add(p)
+                    }
                 }
                 Log.d("testamm","document ->> ${people}")
                 adapter.addPeople(people)
             }
 
-
+        binding.userName.text = FirebaseAuth.getInstance().currentUser?.displayName
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
         return binding.root
