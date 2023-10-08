@@ -47,7 +47,7 @@ class PeopleFragment : Fragment() {
                 adapter.addPeople(people)
             }
 
-
+        binding.userName.text = FirebaseAuth.getInstance().currentUser?.displayName
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
         return binding.root
