@@ -20,7 +20,7 @@
         android:id="@+id/savedFragment"
         android:actionLayout="@layout/menu_item_layout"
         android:enabled="true"
-        android:icon="@drawable/saved_jobs_icon"
+        android:icon="@drawable/lightning_ring_light"
         android:titleTextAppearance="@style/BottomNavBarStyle"
         android:title="@string/saved_bottom_nav_button" />
 
