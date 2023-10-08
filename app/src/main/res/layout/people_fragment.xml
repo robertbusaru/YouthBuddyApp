@@ -1,17 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_marginTop="40dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/profilePicFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imvCircular"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:adjustViewBounds="true"
+                android:src="@color/grey_stroke_calendar"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <TextView
+                style="@style/SpecialInfoTextStyle"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:text="@string/profile_pic_string"
+                android:textAlignment="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/employeeName"
+            style="@style/SubTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:text="Dear,"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/profilePicFrame"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userName"
+            style="@style/SpecialInfoTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/user_name"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/profilePicFrame"
+            app:layout_constraintTop_toBottomOf="@id/employeeName" />
+
+        <View
+            android:id="@+id/line_of_header"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/grey_stroke_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
+        android:id="@+id/fullDayTextview"
+        style="@style/SpecialInfoTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="People"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/people_title"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/profileDashboard" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/fullDayTextview"
+        app:layout_constraintTop_toBottomOf="@id/fullDayTextview">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
