@@ -79,7 +79,7 @@
     </style>
 
     <style name="QuestionStyle">
-        <item name="android:fontFamily">@font/barlow_bold</item>
+        <item name="android:fontFamily">@font/barlow_light</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/black</item>

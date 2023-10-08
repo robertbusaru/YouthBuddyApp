@@ -121,13 +121,12 @@
         style="@style/OutlinedBoxEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:layout_marginEnd="20dp"
         app:boxStrokeColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/locationTv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/locationTv"
-        app:layout_constraintTop_toTopOf="@+id/locationTv">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTv">
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/InputTextStyle"
@@ -141,13 +140,12 @@
         style="@style/OutlinedBoxEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15sp"
         android:layout_marginEnd="20dp"
         app:boxStrokeColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/skillsTv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/skillsTv"
-        app:layout_constraintTop_toTopOf="@+id/skillsTv">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skillsTv">
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/InputTextStyle"
@@ -161,13 +159,12 @@
         style="@style/OutlinedBoxEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="15sp"
         android:layout_marginEnd="20dp"
         app:boxStrokeColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/employmentTv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/employmentTv"
-        app:layout_constraintTop_toTopOf="@+id/employmentTv">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employmentTv">
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/InputTextStyle"
@@ -181,9 +178,12 @@
         style="@style/QuestionStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15sp"
         android:layout_marginTop="50dp"
-        android:text="Location"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="@string/location"
+        app:drawableStartCompat="@drawable/home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullDayTextview" />
 
@@ -192,23 +192,28 @@
         style="@style/QuestionStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="70dp"
-        android:text="Skills"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="16sp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="@string/skills"
+        app:drawableStartCompat="@drawable/idea"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/skillsTv" />
+        app:layout_constraintTop_toBottomOf="@+id/currentDomainEt" />
 
     <TextView
         android:id="@+id/skillsTv"
         style="@style/QuestionStyle"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="70dp"
-        android:text="Domain"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="16sp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="@string/domain"
+        app:drawableStartCompat="@drawable/briefcase"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/locationTv" />
+        app:layout_constraintTop_toBottomOf="@+id/locationEt" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
