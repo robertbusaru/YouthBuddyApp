@@ -32,13 +32,6 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:shapeAppearanceOverlay="@style/Circular" />
 
-            <TextView
-                style="@style/SpecialInfoTextStyle"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:gravity="center"
-                android:text="@string/profile_pic_string"
-                android:textAlignment="center" />
 
         </FrameLayout>
 
