@@ -64,4 +64,6 @@
     <string name="document_tips">Tap into resources like guides, manuals, articles, and more that serve as valuable tools for self-directed learning and skill acquisition.</string>
     <string name="two_pen_text">Join forces with peers, co-create, and learn through cooperation and shared expertise, enhancing not only your writing but also critical thinking and teamwork skills.</string>
     <string name="jobs_based_on">Jobs based on your profile</string>
+    <string name="domain">Domain</string>
+    <string name="skills">Skills</string>
 </resources>
