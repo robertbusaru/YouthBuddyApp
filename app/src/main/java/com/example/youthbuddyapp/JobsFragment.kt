@@ -61,7 +61,6 @@ class JobsFragment : Fragment() {
     @SuppressLint("SetJavaScriptEnabled")
     private fun configureWebView(webView: WebView) {
         webView.webViewClient = object : WebViewClient() {
-            // ...
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
@@ -70,6 +69,8 @@ class JobsFragment : Fragment() {
                 removeElement(view, "MobserpJobAlert")
                 removeElement(view, "main")
                 removeElement(view, "ot-sdk-container")
+                binding.progress.visibility = View.GONE
+                binding.webview.visibility = View.VISIBLE
             }
         }
 

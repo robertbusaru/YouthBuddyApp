@@ -9,7 +9,7 @@ import retrofit2.http.POST
 
 interface ApiInterface {
     @Headers(
-        "Authorization: Bearer ya29.a0AfB_byC9lbSOylT3V_rK_QHypyQIN5Kzml4WEb5KxcGkDK9Mug5bDg9FoLnKRlbVpYFpu9RnzIIHVJzwsmvkHWYxjMpkRt1_Rg0QZauUJihm2ZkaYNuf0pG6r1YQnXlxShbBxxTU1D8FIycOMaXfKmLqeSCPkm-VmA6Wd8VKHjbzaCgYKAWMSARMSFQGOcNnCiScm6Ou7tB7dZ1D7-5Y68w0179",
+        "Authorization: Bearer ya29.a0AfB_byAq5NsAyzFJwpfBHVenSdAuyEwUabcjyIZrHHGrKVmEw_gd5ed23pwyyNAbomLmNUODcltv8Cv2VdqaVaWiZfvUNHNCiwr7byqNAqVvu97JfPJPLaqoegNnn4dFu6zczz7TdA5FhL-dHOQpyp9JXQ4j6V0CBuX6kQvtcd6_aCgYKARASARMSFQGOcNnCFlZxkJbh-QqPqYCSgO2oWg0179",
         "x-goog-user-project: youthbuddyapp"
     )
     @POST("v2/projects/youthbuddyapp/agent/sessions/1234:detectIntent")
