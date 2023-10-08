@@ -29,7 +29,8 @@ class PeopleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = PeopleFragmentBinding.inflate(inflater, container, false)
-            Firebase.firestore.collection("users").get().addOnSuccessListener { documents->
+        adapter = PeopleAdapter(requireContext(),people)
+        Firebase.firestore.collection("users").get().addOnSuccessListener { documents->
                 for (document in documents){
                     Log.d("testamm","document ->> ${document.data["name"]}")
                     var p = People(document.data["profilePicture"] as String,
@@ -37,9 +38,11 @@ class PeopleFragment : Fragment() {
                         document.data["email"] as String)
                     people.add(p)
                 }
+                Log.d("testamm","document ->> ${people}")
+                adapter.addPeople(people)
             }
-        adapter = PeopleAdapter(requireContext(),people)
-        adapter.addPeople(people)
+
+
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
         return binding.root

@@ -12,17 +12,18 @@ import com.squareup.picasso.Picasso
 
 class PeopleAdapter(private val context: Context, private var peopleList: ArrayList<com.example.youthbuddyapp.models.People>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    var list:ArrayList<com.example.youthbuddyapp.models.People> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding = UserRecyclerProfileBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return UserCardViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
-        return peopleList.size
+        return list.size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val person = peopleList[position]
+        val person = list[position]
         Log.d("testamm","$person")
         holder as UserCardViewHolder
         Picasso.get().load(peopleList[position].photoUrl).into(holder.photo)
@@ -31,8 +32,8 @@ class PeopleAdapter(private val context: Context, private var peopleList: ArrayL
     }
 
     fun addPeople(people: List<com.example.youthbuddyapp.models.People>){
-        peopleList.clear()
-        peopleList.addAll(people)
+        list.clear()
+        list.addAll(people)
         notifyDataSetChanged()
     }
 
